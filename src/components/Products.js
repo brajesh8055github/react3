@@ -9,44 +9,44 @@ const productsData = [
     },
     {
         image: require('../images/p2.jpg'),
-        title: "Formal Blue Shirt",
-        price: "$45.99",
+        title: "Dark Black T-Shirt",
+        price: "$200.50",
         rating: "⭐⭐⭐⭐⭐", 
     },
     {
         image: require('../images/p3.jpg'),
-        title: "Formal Blue Shirt",
-        price: "$45.99",
+        title: "Hoodie For Men",
+        price: "$500.60",
         rating: "⭐⭐⭐⭐⭐", 
     },
     {
         image: require('../images/p4.jpg'),
-        title: "Formal Blue Shirt",
-        price: "$45.99",
+        title: "Party Suit For Men",
+        price: "$300.70",
         rating: "⭐⭐⭐⭐⭐", 
     },
     {
         image: require('../images/p5.png'),
-        title: "Formal Blue Shirt",
-        price: "$45.99",
+        title: "Sport Shoes",
+        price: "$500.10",
         rating: "⭐⭐⭐⭐⭐", 
     },
     {
         image: require('../images/p6.png'),
-        title: "Formal Blue Shirt",
-        price: "$45.99",
+        title: "Girls Hand Bag",
+        price: "$60.55",
         rating: "⭐⭐⭐⭐⭐", 
     },
     {
         image: require('../images/p7.png'),
-        title: "Formal Blue Shirt",
-        price: "$45.99",
+        title: "Sport Shoes",
+        price: "$100.99",
         rating: "⭐⭐⭐⭐⭐", 
     },
     {
         image: require('../images/p8.png'),
-        title: "Formal Blue Shirt",
-        price: "$45.99",
+        title: "Girls Heel-Shoes",
+        price: "$99.99",
         rating: "⭐⭐⭐⭐⭐", 
     },
 
@@ -54,11 +54,13 @@ const productsData = [
 
 const Products = () => {
   return (
-    <div className='product' style={{padding:"0 20px"}}>
+    <>
+    <h1 className="text-3xl font-bold text-center py-4">PRODUCTS</h1>
+    <div className='product' style={{padding:"0 20px"}} id='product'>
         {productsData.map((product,index)=>(
             <div key={index} className='product-card'>
                 <img src={product.image} alt='img'></img>
-                <div>
+                <div style={{padding:"5px"}}>
                     <h3>{product.title}</h3>
                     <p>{product.price}</p>
                     <p>{product.rating}</p>
@@ -68,6 +70,7 @@ const Products = () => {
         )
         )}
     </div>
+    </>
   )
 }
 

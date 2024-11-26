@@ -1,3 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body{
+  font-family: "Poppins", serif;
+}
+a{
+  text-decoration: none;
+}
+li{
+  padding: 5px 0;
+}
+
+button{
+  font-family: "Poppins", serif;
+  font-weight: 500;
+  font-size: 18px;
+}
 .top{
   display: flex;
   align-items: center;
@@ -6,11 +22,11 @@
   color: #fff;
  }
  .btn-top{
-  padding: 10px;
-  background: orange;
+  padding: 5px;
+  background: #ffc107;
   color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: 2px;
   margin-right: 5px;
  }
 
@@ -20,7 +36,7 @@
   align-items: center;
   max-width: 1300px;
   margin: 0 auto; 
-  background: rgb(255, 179, 0);
+  background: #ffc107;
 }
 
 .nav-left {
@@ -49,18 +65,23 @@
      bottom: 0;
      padding: 10px;
   }
-.hero{
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  background: teal;
-  color: #fff;
-}
-.hero img{
-  width: 100%;
-}
+  .hero {
+    background-image: url('./images/watch.png');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    text-align: left; 
+    padding-left: 20px; 
+  }
+
 .btn-hero{
   padding: 10px 20px;
-  background: orange;
+  background: #ffc107;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -81,7 +102,7 @@
 }
 .btn-over{
   padding: 10px;
-  background: orange;
+  background: #ffc107;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -92,10 +113,11 @@ display: grid;
 grid-template-columns: repeat(4,1fr);
 text-align: center;
 gap: 10px;
+
 }
 .product-card{
-  border: 1px solid gray;
-  
+  box-shadow: 0 0 20px 0 rgba(0,0,0,0.1);
+  border-radius: 5px;
 
 }
 .product-card img{
@@ -103,7 +125,7 @@ gap: 10px;
 }
 .btn-p{
   padding: 10px;
-  background: orange;
+  background: #ffc107;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -117,9 +139,8 @@ gap: 10px;
 
 }
 .category ul li{
-  border: 1px solid gray;
-  background: orange;
-  padding: 10px;
+  background: #ffc107;
+  padding: 8px 20px;
 }
 
 .slide {
@@ -130,21 +151,13 @@ gap: 10px;
 }
 .left-icon{
   width: 40px;
-  /* border: 1px solid red; */
-
 }
 .card-s{
-  /* border: 1px solid red; */
   max-width: 300px;
 }
 .slide img{
   width: 100%;
 }
-
-
-
-
-
 .contact{
   display: flex;
   justify-content: space-between;
@@ -169,7 +182,7 @@ gap: 10px;
 }
 .btn-c{
   padding: 10px 20px;
-  background: orange;
+  background: #ffc107;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -177,30 +190,19 @@ gap: 10px;
 }
 
 .banner{
-  /* display: flex;
-  justify-content: space-between;
-  align-items: center; */
-
   display: grid;
   grid-template-columns: repeat(3,1fr);
   border-top: 1px solid gray;
   border-bottom: 1px solid gray;
-  /* gap: 10px; */
   align-items: center;
-  /* height: 20px; */
 }
 .s-banner{
   display: flex;
   align-items: center;
   justify-content: center;
-  /* width: 80px; */
-  /* display: grid; */
   align-items: center;
-  /* grid-template-columns: repeat(2,1fr); */
-  /* border: 1px solid red; */
 }
 .s-banner img{
-  /* width: 100%; */
   width: 60px;
 }
 .shipp-flex{
@@ -208,6 +210,7 @@ gap: 10px;
 }
 .subscribe{
   text-align: center;
+  margin: 40px 0;
 }
 .subscribe input{
   width: 70%;
@@ -220,7 +223,7 @@ gap: 10px;
 }
 .btn-b{
   padding: 10px;
-  background: orange;
+  background: #ffc107;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -228,7 +231,6 @@ gap: 10px;
 
 .footer{
   display: flex;
-  /* align-items: center; */
   justify-content: space-between;
   background: #000;
   color: #fff;
@@ -240,8 +242,31 @@ gap: 10px;
 .s-footer img{
   width: 25px;
   padding-right: 5px;
-  /* border: 1px solid red; */
+}
 
+@media (max-width: 1100px) {
+  .category ul{
+    flex-wrap: wrap;
+  }
+  .category ul li{
+    margin: 5px 0;
+  }
+}
 
-
+@media (max-width:1020px){
+  .footer{
+    display: block;
+  }
+  .contact{
+    display: block;
+  }
+}
+@media (max-width:700px){
+  .product{
+  display: block;
+  }
+  .banner{
+  
+    display: block;
+  }
 }

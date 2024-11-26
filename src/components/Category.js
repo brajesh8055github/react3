@@ -13,8 +13,8 @@ import right from '../images/right-arrow.png'
 const Category = () => {
   return (
     <>
-    <div className='category' style={{padding:" 0 20px"}}>
-        <h1 style={{textAlign:"center"}}>All Category</h1>
+    <div className='category' style={{padding:" 0 20px"}} id='category'>
+        <h1 className='py-4 text-center text-3xl font-bold'>All Category</h1>
         <ul>
             <li>T-Shirts</li>
             <li>Shoes</li>
@@ -51,11 +51,17 @@ const Category = () => {
           </div>
             
         </div>
+
+
+        
+
+
+
         <div style={{padding:"0 20px"}}>
-        <h2>Products :</h2>
+        <h2 className="text-3xl font-bold py-2">Products :</h2>
         <p>A sleek and powerful mobile phone featuring a vibrant display, high-speed performance, long-lasting battery, and advanced camera system, designed to keep you connected and productive on the go. Packed with cutting-edge features, it ensures a seamless user experience for work, play, and everything in between.</p>
 
-        <h2>About :</h2>
+        <h2 className="text-3xl font-bold py-2">About :</h2>
         <p>E-commerce refers to the buying and selling of goods and services online. It enables businesses to reach global customers through digital platforms, offering convenience, variety, and secure payment options. From retail shopping to subscription services, e-commerce transforms the way people access products, bridging businesses and consumers in a fast, efficient, and accessible manner.</p>
         </div>
         </>
