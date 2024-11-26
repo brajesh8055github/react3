@@ -3,9 +3,9 @@ import React from 'react'
 const Contact = () => {
   return (
     <div style={{padding:"0 20px"}}>
-        <h1>Contact:</h1>
+        <h1 className="text-3xl font-bold py-4" id='contact'>Contact:</h1>
         <form>
-            <div className='contact' id='contact'>
+            <div className='contact'>
                 <div>
             <input type='text' placeholder='Name'></input>
             <input type='email' placeholder='Email'></input>

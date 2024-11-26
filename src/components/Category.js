@@ -1,16 +1,41 @@
 import React from 'react'
-import slide1 from '../images/slide1.png'
-import slide2 from '../images/slide2.png'
-import slide3 from '../images/slide3.png'
-import slide4 from '../images/slide4.png'
-import slide5 from '../images/slide5.png'
-import slide6 from '../images/slide6.png'
-import slide7 from '../images/slide7.png'
-import slide8 from '../images/slide8.png'
-import left from '../images/left-arrow.png'
-import right from '../images/right-arrow.png'
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+const data = [
+  {
+    img: require('../images/slide1.png')
+  },
+  {
+    img: require('../images/slide2.png')
+
+  },
+  {
+    img: require('../images/slide3.png')
+
+  },
+  {
+    img: require('../images/slide4.png')
+
+  },
+  {
+    img: require('../images/slide5.png')
+
+  },
+  {
+    img: require('../images/slide6.png')
+
+  },
+ ]
 
 const Category = () => {
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1
+  };
   return (
     <>
     <div className='category' style={{padding:" 0 20px"}} id='category'>
@@ -30,33 +55,16 @@ const Category = () => {
 
         </div>
         <div className='slide'>
-          <div className='left-icon'>
-          <img src={left} alt='img'></img>
-          </div>
-          <div className='card-s'>
-            <img src={slide1} alt='img'></img>
-            </div>
-            <div className='card-s'>
-            <img src={slide6} alt='img'></img>
-            </div>
-            <div className='card-s'>
-            <img src={slide3} alt='img'></img>
-            </div>
-            <div className='card-s'>
-            <img src={slide5} alt='img'></img>
-            </div>
-            
-            <div className='left-icon'>
-          <img src={right} alt='img'></img>
-          </div>
-            
-        </div>
-
-
-        
-
-
-
+          <Slider {...settings}>
+          {/* <Slider> */}
+               {data.map((d)=>(
+                 <div className='card-s'>
+                 <img src={d.img} alt='img'></img>
+                 <p>{d.desc}</p>
+                 </div> 
+               ))}
+          </Slider>
+       </div>
         <div style={{padding:"0 20px"}}>
         <h2 className="text-3xl font-bold py-2">Products :</h2>
         <p>A sleek and powerful mobile phone featuring a vibrant display, high-speed performance, long-lasting battery, and advanced camera system, designed to keep you connected and productive on the go. Packed with cutting-edge features, it ensures a seamless user experience for work, play, and everything in between.</p>

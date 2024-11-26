@@ -55,8 +55,8 @@ const productsData = [
 const Products = () => {
   return (
     <>
-    <h1 className="text-3xl font-bold text-center py-4">PRODUCTS</h1>
-    <div className='product' style={{padding:"0 20px"}} id='product'>
+    <h1 className="text-3xl font-bold text-center py-4"  id='product'>PRODUCTS</h1>
+    <div className='product' style={{padding:"0 20px"}}>
         {productsData.map((product,index)=>(
             <div key={index} className='product-card'>
                 <img src={product.image} alt='img'></img>
