@@ -1,38 +1,12 @@
 // import React from 'react'
 import logo from '../images/shop.png'
-import like from '../images/like.png'
-import user from '../images/google.png'
-import cart from '../images/free-shipping.png'
-
-// const Navbar = () => {
-//     return (
-//         <div className='navbar' style={{padding:"0 20px"}}>
-//              <div className='nav-left'>
-//                 <div>
-//                     <h1 style={{color:"white"}}>E Shop</h1>
-//                 </div>
-//                 <p><a href='/'>Home</a></p>
-//                 <p><a href='#product'>Product</a></p>
-//                 <p><a href='#category'>Category</a></p>
-//                 <p><a href='#about'>About Us</a></p>
-//                 <p><a href='#contact'>Contact Us</a></p>
-//             </div>
-//             <div className='nav-right'>
-//                 <img src={cart} alt='img'></img>
-//                 <img src={like} alt='img'></img>
-//                 <img src={user} alt='img'></img>
-//             </div>
-//         </div>
-//     )
-// }
-
-// export default Navbar
-
+import { IoCart } from "react-icons/io5";
+import { FaHeart } from "react-icons/fa6";
+import { FaUser } from "react-icons/fa";
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton} from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
-  { name: 'E Shop', href: '/node_modules', current: true },
   { name: 'Home', href: '/', current: false },
   { name: 'Product', href: '#product', current: false },
   { name: 'Category', href: '#category', current: false },
@@ -46,7 +20,6 @@ function classNames(...classes) {
 
 export default function Navbar() {
   return (
-    // <Disclosure as="nav" className="bg-gray-800">
     <Disclosure as="nav" className="bg-yellow-400">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
@@ -66,6 +39,7 @@ export default function Navbar() {
                 src={logo}
                 className="h-8 w-auto"
               />
+              <h1 className='px-4 text-center text-3xl font-bold text-white'>E Shop</h1>
             </div>
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4 text-black">
@@ -82,45 +56,25 @@ export default function Navbar() {
             </div>
           </div>
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-            {/* <button
-              type="button"
-              className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-            >
-              <span className="absolute -inset-1.5" />
-              <span className="sr-only">View notifications</span>
-              <BellIcon aria-hidden="true" className="size-6" />
-            </button> */}
 
             {/* Profile dropdown */}
             <Menu as="div" className="relative ml-3">
               <div>
               {/* <MenuButton className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"> */}
-               <MenuButton className="relative rounded-full p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+               <MenuButton className="relative rounded-full p-1 text-black hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                   <span className="absolute -inset-1.5" />
                   <span className="sr-only">Open user menu</span>
-                  <img
-                    alt=""
-                     src={cart}
-                    className="size-8 rounded-full"
-                  />
+                  <IoCart/>
                 </MenuButton>
-                <MenuButton className="relative rounded-full p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                <MenuButton className="relative rounded-full p-1 text-black hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                   <span className="absolute -inset-1.5" />
                   <span className="sr-only">Open user menu</span>
-                  <img
-                    alt=""
-                     src={like}
-                    className="size-8 rounded-full"
-                  />
+                  <FaHeart/>
                 </MenuButton>
-                <MenuButton className="relative rounded-full p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 px-2">
+                <MenuButton className="relative rounded-full p-1 text-black hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 px-2">
                   <span className="absolute -inset-1.5" />
                   <span className="sr-only">Open user menu</span>
-                  <img
-                    alt=""
-                     src={user}
-                    className="size-8 rounded-full"
-                  />
+                  <FaUser/>
                 </MenuButton>
               </div>
             </Menu>
