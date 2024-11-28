@@ -116,6 +116,32 @@ gap: 10px;
   border: none;
   border-radius: 5px;
 }
+.btn-b{
+  padding: 10px;
+  background: green;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+.product-details{
+  max-width: 900px;
+  margin: 5px auto;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 20px 0 rgba(0,0,0,0.1);
+
+}
+.btn-details{
+  padding: 2px 15px;
+  background-color: #000;
+  border-radius: 5px;
+  color: #fff;
+  margin-bottom: 5px;
+
+}
 
 .category ul{
   display: flex;
@@ -263,4 +289,12 @@ gap: 10px;
     display: block;
     text-align: center;
   }
+}
+
+@media (max-width:400px){
+.product-details{
+  display: block;
+  justify-content: center;
+  text-align: center;
+}
 }

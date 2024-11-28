@@ -1,7 +1,8 @@
-import React from 'react'
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const productsData = [
-    {
+        {
         image: require('../images/p1.jpg'),
         title: "Formal Blue Shirt",
         price: "$45.99",
@@ -49,29 +50,44 @@ const productsData = [
         price: "$99.99",
         rating: "⭐⭐⭐⭐⭐", 
     },
-
-]
+];
 
 const Products = () => {
-  return (
-    <>
-    <h1 className="text-3xl font-bold text-center py-4"  id='product'>PRODUCTS</h1>
-    <div className='product' style={{padding:"0 20px"}}>
-        {productsData.map((product,index)=>(
-            <div key={index} className='product-card'>
-                <img src={product.image} alt='img'></img>
-                <div style={{padding:"5px"}}>
-                    <h3>{product.title}</h3>
-                    <p>{product.price}</p>
-                    <p>{product.rating}</p>
-                    <button className='btn-p'>Add to Cart</button>
-                    </div>
-                </div>
-        )
-        )}
-    </div>
-    </>
-  )
-}
+    const navigate = useNavigate();
 
-export default Products
+    function CardHandler(product) {
+        navigate('/product-details', {
+            state: {
+                title: product.title,
+                price: product.price,
+                rating: product.rating,
+                image: product.image,
+            }
+        });
+    }
+
+    return (
+        <>
+            <h1 className="text-3xl font-bold text-center py-4" id="product">PRODUCTS</h1>
+            <div className="product" style={{ padding: "0 20px" }}>
+                {productsData.map((product, index) => (
+                    <div
+                        key={index}
+                        className="product-card"
+                          onClick={() => CardHandler(product)}
+                    >
+                        <img src={product.image} alt="img" />
+                        <div style={{ padding: "5px" }}>
+                            <h3>{product.title}</h3>
+                            <p>{product.price}</p>
+                            <p>{product.rating}</p>
+                            <button className="btn-p">Add to Cart</button>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </>
+    );
+};
+
+export default Products;
