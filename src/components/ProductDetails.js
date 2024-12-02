@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import {useLocation} from 'react-router-dom'
+import Footer from './Footer';
 const ProductDetails = () => {
     const location = useLocation();
 
@@ -14,6 +15,7 @@ function handleInc(){
   setCount(count+1)
 }
   return (
+    <>
     <div className='product-details'>
         <img src={location.state.image} alt='img'></img>
         <div>
@@ -28,6 +30,8 @@ function handleInc(){
         </div>
     
     </div>
+    <Footer/>
+    </>
   )
 }
 

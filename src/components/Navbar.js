@@ -4,6 +4,7 @@ import { IoCart } from "react-icons/io5";
 import { FaHeart, FaUser } from "react-icons/fa";
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import { IoMdArrowDropdown } from "react-icons/io";
 
 const navigation = [
   { name: 'Home', href: '/', current: false },
@@ -14,8 +15,8 @@ const navigation = [
 ];
 
 const categories = [
-  'T-Shirts', 'Shoes', 'Hoodies', 'Shirt', 'Pants', 
-  'Laptop', 'Mobile', 'Cameras', 'Headphone', 
+  'T-Shirts', 'Shoes', 'Hoodies', 'Shirt', 'Pants',
+  'Laptop', 'Mobile', 'Cameras', 'Headphone',
   'iPad & Tablets',
 ];
 
@@ -45,8 +46,9 @@ export default function Navbar() {
                 {navigation.map((item) => (
                   item.isDropdown ? (
                     <Menu as="div" key={item.name} className="relative">
-                      <MenuButton className="text-black hover:text-white focus:outline-none px-3 py-2 text-sm">
+                      <MenuButton className="flex items-center text-black hover:text-white focus:outline-none px-3 py-2 text-sm">
                         {item.name}
+                        <IoMdArrowDropdown className="ml-1" size={16} />
                       </MenuButton>
                       <Menu.Items className="absolute mt-2 w-48 bg-white shadow-lg rounded-md">
                         {categories.map((category) => (
@@ -76,6 +78,7 @@ export default function Navbar() {
                     </a>
                   )
                 ))}
+
               </div>
             </div>
           </div>
@@ -97,7 +100,7 @@ export default function Navbar() {
               href={item.href}
               className={classNames(
                 item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                'block rounded-md px-3 py-2 text-sm font-medium', 
+                'block rounded-md px-3 py-2 text-sm font-medium',
               )}
             >
               {item.name}

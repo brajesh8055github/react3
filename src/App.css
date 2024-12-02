@@ -298,3 +298,14 @@ gap: 10px;
   text-align: center;
 }
 }
+@media (max-width: 768px) {
+  .card-container > div {
+    width: calc(50% - 20px); /* Two cards per row on tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .card-container > div {
+    width: 100%; /* Full width on small screens */
+  }
+}

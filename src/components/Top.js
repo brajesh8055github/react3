@@ -10,8 +10,8 @@ const Top = () => {
         </div>
         <div className="top-right">
           <>
-            <button className='btn-top'>Login</button>
-            <button className='btn-top'>Register</button>
+            <a href='/login'><button className='btn-top'>Login</button></a>
+            <a href='/register'><button className='btn-top'>Register</button></a>
             </>
             <div class="icons">
             <i><img src={facebook} alt="" style={{width: "20px"}}/></i>
